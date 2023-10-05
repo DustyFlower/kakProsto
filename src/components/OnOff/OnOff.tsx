@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
 
 type OnOffType = {
-    turn: 'on' | 'off'
+    turn: 'on' | 'off' | 'inactive'
 }
 
 export const OnOff = (props: OnOffType) => {
     const [status, setStatus] = useState(props.turn);
 
-    const OnClickHandler = (newStatus: 'on' | 'off') => {
+    const OnClickHandler = (newStatus: 'on' | 'off' | 'inactive') => {
         setStatus(newStatus)
     }
 
@@ -26,7 +26,7 @@ export const OnOff = (props: OnOffType) => {
                     width: '20px',
                     height: '20px',
                     borderRadius: '50%',
-                    backgroundColor: status === 'on' ? 'green' : 'red',
+                    backgroundColor: status === 'on' ? 'green' : status === 'off' ? 'red' : 'gray',
                     display: 'inline-block',
                     marginLeft: '10px',
                 }}

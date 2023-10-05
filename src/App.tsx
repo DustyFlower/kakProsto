@@ -21,6 +21,7 @@ function App(props: any) {
 
             <OnOff turn={'on'}/>
             <OnOff turn={'off'}/>
+            <OnOff turn={'inactive'}/>
         </div>
     );
 }
