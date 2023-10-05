@@ -3,6 +3,7 @@ import './App.css';
 import {Accordion} from "./components/Accordion/Accordion";
 import {Rating} from "./components/Rating/Rating";
 import {debug} from "util";
+import {OnOff} from './components/OnOff/OnOff';
 
 function App(props: any) {
     console.log("App is rendering")
@@ -17,6 +18,9 @@ function App(props: any) {
             <Rating value={3}/>
             <Rating value={4}/>
             <Rating value={5}/>
+
+            <OnOff turn={'on'}/>
+            <OnOff turn={'off'}/>
         </div>
     );
 }
