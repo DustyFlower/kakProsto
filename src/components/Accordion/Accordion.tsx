@@ -27,7 +27,7 @@ function AccordionTitle(props: AccordionTitlePropsType) {
     return <h3>{props.title}</h3>
 }
 
-function AccordionBody(props: any) {
+function AccordionBody() {
     console.log('AccordionBody is rendering')
     return <ul>
         <li>1</li>
