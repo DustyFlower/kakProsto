@@ -23,7 +23,6 @@ type StarPropsValue = {
 }
 
 function Star(props: StarPropsValue) {
-    debugger
     console.log('Star is rendering')
     if (props.selected) {
         return <span><b>star </b></span>
