@@ -15,10 +15,13 @@ export function UncontrolledRating(props: RatingPropsType) {
 
     return (
         <div>
+            <h4>
+                Uncontrolled Rating down
+            </h4>
+
             <Star onClick={() => ButtonOnClickHandler(1)} selected={value > 0}/>
             <Star onClick={() => ButtonOnClickHandler(2)} selected={value > 1}/>
             <Star onClick={() => ButtonOnClickHandler(3)} selected={value > 2}/>
-
             <Star onClick={() => ButtonOnClickHandler(4)} selected={value > 3}/>
             <Star onClick={() => ButtonOnClickHandler(5)} selected={value > 4}/>
         </div>
@@ -32,6 +35,7 @@ type StarPropsValue = {
 
 function Star(props: StarPropsValue) {
     console.log('Star is rendering')
-    return props.selected ? <span onClick={() => props.onClick()}><b>star </b></span> :
-        <span onClick={() => props.onClick()}>star </span>
+
+    return <span onClick={() => props.onClick()}>{props.selected ? <b>star </b> : 'star '}</span>
+
 }
