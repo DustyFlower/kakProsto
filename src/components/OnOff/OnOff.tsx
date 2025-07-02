@@ -3,7 +3,7 @@ type OnOffPropsType = {
     value: boolean;
 }
 
-function OnOff(props: OnOffPropsType) {
+export function OnOff(props: OnOffPropsType) {
     console.log('OnOff is rendering')
 
     const onStyle = {
@@ -45,5 +45,3 @@ function OnOff(props: OnOffPropsType) {
         <div style={indicatorStyle}></div>
     </div>
 }
-
-export default OnOff;

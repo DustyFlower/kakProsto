@@ -7,7 +7,7 @@ type RatingPropsType = {
     onClick: (value: RatingValueType) => void;
 }
 
-export function Rating(props: RatingPropsType) {
+function Rating(props: RatingPropsType) {
     console.log('Rating is rendering')
 
     return (
@@ -33,3 +33,5 @@ function Star(props: StarPropsType) {
         props.onClick(props.value)
     }>{props.selected ? <b>star </b> : 'star '}</span>
 }
+
+export default Rating

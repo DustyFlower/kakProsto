@@ -1,16 +1,19 @@
 import React, {useState} from 'react';
+import {RatingValueType} from '../Rating/Rating';
 
 type RatingPropsType = {
-//    value: 0 | 1 | 2 | 3 | 4 | 5;
+    defaultValue?: RatingValueType;
+    onChange: (value: RatingValueType)=> void
 }
 
 export function UncontrolledRating(props: RatingPropsType) {
     console.log('Rating is rendering')
 
-    let [value, setValue] = useState(0)
+    let [value, setValue] = useState<RatingValueType>(props.defaultValue ? props.defaultValue : 0)
 
-    const ButtonOnClickHandler = (NumberValue: number) => {
+    const ButtonOnClickHandler = (NumberValue: RatingValueType) => {
         setValue(NumberValue)
+        props.onChange(NumberValue)
     }
 
     return (
