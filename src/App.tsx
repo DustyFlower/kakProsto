@@ -6,6 +6,7 @@ import UncontrolledOnOff from './components/UncontrolledOnOff/UncontrolledOnOff'
 import {UncontrolledRating} from './components/UncontrolledRating/UncontrolledRating';
 import {UncontrolledAccordion} from './components/UncontrolledAccordion/UncontrolledAccordion';
 import {OnOff} from './components/OnOff/OnOff';
+import {Select} from './components/Select/Select';
 
 
 //function declaration
@@ -24,10 +25,13 @@ function App() {
             <PageTitle title={'Page Title'}/>
             <OnOff onClick={setSwitchOn} value={switchOn}/>
             <Accordion titleValue={'Menu'} collapsed={accordionCollapsed}
-                       onClick={() => setAccordionCollapsed(!accordionCollapsed)} onChange={()=>{}} items={[{title: 'Dimych', value: 1}, {title: 'Valera', value: 2}, {
-                title: 'Artem',
-                value: 3
-            }, {title: 'Victor', value: 4}]}/>
+                       onClick={() => setAccordionCollapsed(!accordionCollapsed)} onChange={() => {
+            }} items={[
+                {title: 'Dimych', value: 1},
+                {title: 'Valera', value: 2},
+                {title: 'Artem', value: 3},
+                {title: 'Victor', value: 4}
+            ]}/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
             <UncontrolledRating onChange={setRatingValue}/>
             <UncontrolledAccordion titleValue={'Uncontrolled Accordion'}/>
