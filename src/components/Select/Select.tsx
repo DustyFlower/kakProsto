@@ -54,6 +54,7 @@ export function Select(props: SelectPropsType) {
             setActive(!active)
         }
     }
+
     return (
         <>
             <div className={`${styles.select}`} onKeyUp={onKeyUp} tabIndex={0}>
