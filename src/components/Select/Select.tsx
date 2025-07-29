@@ -50,6 +50,9 @@ export function Select(props: SelectPropsType) {
         if (e.key === 'Enter' || e.key === 'Escape') {
             setActive(false)
         }
+        if (e.key === 'Enter') {
+            setActive(!active)
+        }
     }
     return (
         <>
